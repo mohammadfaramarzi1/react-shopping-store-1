@@ -5,6 +5,7 @@ import { SiHubspot } from "react-icons/si";
 import { GrAmazon } from "react-icons/gr";
 
 import SharedTopSection from "../shared/SharedTopSection";
+import { Link } from "react-router-dom";
 
 function CompaniesSection() {
   return (
@@ -14,26 +15,26 @@ function CompaniesSection() {
         desc="Arcu cursus vitae congue mauris rhoncus viverra nibh cras pulvinar mattis blandit libero cursus mattis."
       />
       <div className="flex justify-between child:flex child:flex-col child:items-center child:gap-y-1.5 child:text-3xl">
-        <div>
-            <FaFacebookF />
-            <h4>Facebook</h4>
-        </div>
-        <div>
-            <SiTinder />
-            <h4>Tinder</h4>
-        </div>
-        <div>
-            <SiAirbnb />
-            <h4>Airbnb</h4>
-        </div>
-        <div>
-            <SiHubspot />
-            <h4>Hubspot</h4>
-        </div>
-        <div>
-            <GrAmazon />
-            <h4>Amazon</h4>
-        </div>
+        <Link to="https://www.facebook.com/">
+          <FaFacebookF />
+          <h4>Facebook</h4>
+        </Link>
+        <Link to="https://tinder.com/">
+          <SiTinder />
+          <h4>Tinder</h4>
+        </Link>
+        <Link to="https://www.airbnb.com/">
+          <SiAirbnb />
+          <h4>Airbnb</h4>
+        </Link>
+        <Link to="https://www.hubspot.com/">
+          <SiHubspot />
+          <h4>Hubspot</h4>
+        </Link>
+        <Link to="https://www.amazon.com/">
+          <GrAmazon />
+          <h4>Amazon</h4>
+        </Link>
       </div>
     </div>
   );
