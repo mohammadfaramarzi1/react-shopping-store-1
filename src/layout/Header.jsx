@@ -1,9 +1,7 @@
-import React from 'react'
+import Navbar from "../components/templates/Navbar";
 
 function Header() {
-  return (
-    <div>Header</div>
-  )
+  return <Navbar />;
 }
 
-export default Header
+export default Header;

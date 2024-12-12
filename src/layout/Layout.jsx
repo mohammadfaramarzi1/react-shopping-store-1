@@ -1,9 +1,14 @@
-function Layout({children}) {
+import Footer from "./Footer";
+import Header from "./Header";
+
+function Layout({ children }) {
   return (
-    <div>
-        {children}
+    <div className="bg-zinc-900 text-white/80 font-DosisMedium px-8">
+      <Header />
+      {children}
+      <Footer />
     </div>
-  )
+  );
 }
 
-export default Layout
+export default Layout;

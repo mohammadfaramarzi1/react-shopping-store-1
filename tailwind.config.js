@@ -3,16 +3,23 @@ export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
     extend: {
+      container: {
+        center: true,
+      },
       boxShadow: {
         normal: "0px 1px 10px 0px rgba(0, 0, 0, 0.05)",
       },
       fontFamily: {
         DosisBold: "Dosis Bold",
         DosisMedium: "Dosis Medium",
-        DisisSemiBold: "Dosis SemiBold"
-        
+        DisisSemiBold: "Dosis SemiBold",
       },
     },
   },
-  plugins: [],
+  plugins: [
+    function ({ addVariant }) {
+      addVariant("child", "&>*");
+      addVariant("child-hover", "&>*:hover");
+    },
+  ],
 };
