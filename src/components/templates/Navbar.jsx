@@ -3,7 +3,7 @@ import { FaBasketShopping } from "react-icons/fa6";
 
 function Navbar() {
   return (
-    <div className="py-4 flex items-center justify-between">
+    <div className="container py-4 flex items-center justify-between">
       <Link to="/" className="font-DosisBold text-5xl text-violet-500 hover:text-violet-700 transition-colors delay-75">
         <h2>Shopping Store</h2>
       </Link>

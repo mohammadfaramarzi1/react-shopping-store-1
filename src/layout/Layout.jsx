@@ -3,7 +3,7 @@ import Header from "./Header";
 
 function Layout({ children }) {
   return (
-    <div className="bg-zinc-900 text-white/80 font-DosisMedium px-8">
+    <div className="bg-zinc-900 text-white/80 font-DosisMedium">
       <Header />
       {children}
       <Footer />

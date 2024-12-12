@@ -1,9 +1,11 @@
-import React from 'react'
+import React from "react";
 
 function SolutionSection() {
   return (
-    <div>SolutionSection</div>
-  )
+    <div className="bg-zinc-800">
+      
+    </div>
+  );
 }
 
-export default SolutionSection
+export default SolutionSection;
