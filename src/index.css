@@ -30,7 +30,7 @@
     @apply text-xl mb-3;
   }
   .section-description {
-    @apply opacity-80 max-w-md text-center text-lg;
+    @apply opacity-70 max-w-md text-center text-lg;
   }
   .section-parent::after {
     position: absolute;

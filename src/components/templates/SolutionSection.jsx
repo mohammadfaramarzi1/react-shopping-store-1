@@ -4,7 +4,7 @@ import ToolsSection from "./ToolsSection";
 
 function SolutionSection() {
   return (
-    <div className="bg-zinc-800">
+    <div className="bg-zinc-800 px-12">
       <SharedTopSection
         title="Explore the solutions"
         desc=" Duis aute irure dolor in reprehenderit in voluptate velit esse cillum

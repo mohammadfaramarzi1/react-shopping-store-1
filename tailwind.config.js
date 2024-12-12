@@ -5,7 +5,7 @@ export default {
     extend: {
       container: {
         center: true,
-        padding: "1rem"
+        padding: "3rem"
       },
       boxShadow: {
         normal: "0px 1px 10px 0px rgba(0, 0, 0, 0.05)",
