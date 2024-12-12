@@ -1,7 +1,11 @@
-import "./App.css";
+import { BrowserRouter } from "react-router-dom";
 
 function App() {
-  return <p className="text-red-500 font-DosisBold">hello</p>;
+  return (
+    <BrowserRouter>
+      
+    </BrowserRouter>
+  )
 }
 
 export default App;
