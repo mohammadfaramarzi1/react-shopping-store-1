@@ -34,7 +34,7 @@ const simpleWorksBoxesInfos = [
   },
   {
     id: 3,
-    icon: "IoIosContract ",
+    icon: "IoContractSharp",
     title: "Contracting",
     desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
   },
