@@ -1,4 +1,5 @@
 import { Routes, Route } from "react-router-dom";
+import { useQuery } from "@tanstack/react-query";
 
 import HomePage from "../pages/HomePage";
 import AboutUsPage from "../pages/AboutUsPage";
@@ -6,8 +7,15 @@ import CheckOutPage from "../pages/CheckOutPage";
 import NotFoundPage from "../pages/NotFoundPage";
 import ProductDetailPage from "../pages/ProductDetailPage";
 import ProductsPage from "../pages/ProductsPage";
+import { getAllProducts } from "../services/products";
 
 function Router() {
+  const { data, error, isLoading } = useQuery({
+    queryKey: ["all-products"],
+    queryFn: () => getAllProducts,
+  });
+  console.log({ data, error, isLoading });
+
   return (
     <Routes>
       <Route index element={<HomePage />} />
