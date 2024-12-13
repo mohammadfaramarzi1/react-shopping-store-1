@@ -18,16 +18,10 @@ function CompaniesSection() {
 
   return (
     <div className="px-12">
-      <div
-        data-aos="zoom-in"
-        data-aos-offset="200"
-        data-aos-easing="ease-in-sine"
-      >
-        <SharedTopSection
-          title="Trusted by over 20,000 companies all over the world"
-          desc="Arcu cursus vitae congue mauris rhoncus viverra nibh cras pulvinar mattis blandit libero cursus mattis."
-        />
-      </div>
+      <SharedTopSection
+        title="Trusted by over 20,000 companies all over the world"
+        desc="Arcu cursus vitae congue mauris rhoncus viverra nibh cras pulvinar mattis blandit libero cursus mattis."
+      />
       <div className="flex justify-between child:flex child:flex-col child:items-center child:gap-y-1.5 child:text-3xl">
         <Link to="https://www.facebook.com/">
           <FaFacebookF />
