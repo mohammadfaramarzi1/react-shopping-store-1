@@ -1,6 +1,6 @@
 import { CgSearch } from "react-icons/cg";
 
-function Searchbox() {
+function SearchBox() {
   return (
     <div className="flex items-center gap-x-2 border-2 border-zinc-800 p-2 w-80 rounded-md">
       <button className="bg-violet-500 w-7 h-7 flex items-center justify-center rounded-md text-xl">
@@ -15,4 +15,4 @@ function Searchbox() {
   );
 }
 
-export default Searchbox;
+export default SearchBox;

@@ -1,13 +1,19 @@
 import React from 'react'
-import Searchbox from '../components/templates/Searchbox'
+import SearchBox from '../components/templates/SearchBox'
+import ProductsBox from '../components/templates/ProductsBox'
 
 function ProductsPage() {
   return (
     <div className='p-12'>
       <div>
-        <Searchbox />
+        <SearchBox />
       </div>
-      <div></div>
+      <div>
+        <div className='grid grid-cols-3 gap-3'>
+          <ProductsBox />
+        </div>
+        <div></div>
+      </div>
     </div>
   )
 }

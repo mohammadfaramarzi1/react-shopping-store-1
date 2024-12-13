@@ -8,6 +8,7 @@ import NotFoundPage from "../pages/NotFoundPage";
 import ProductDetailPage from "../pages/ProductDetailPage";
 import ProductsPage from "../pages/ProductsPage";
 import { getAllProducts } from "../services/products";
+import Loader from "../components/modules/Loader";
 
 function Router() {
   const { data, error, isLoading } = useQuery({
@@ -15,6 +16,7 @@ function Router() {
     queryFn: () => getAllProducts,
   });
   console.log({ data, error, isLoading });
+  if(isLoading) return <Loader />
 
   return (
     <Routes>
