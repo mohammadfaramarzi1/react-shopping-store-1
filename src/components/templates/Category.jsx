@@ -8,8 +8,8 @@ function Category({ categories }) {
         <h3 className="text-xl font-medium">Categories</h3>
       </div>
       <ul className="flex flex-col gap-y-4">
-        {categories.map((category) => (
-          <li className="pl-3 relative selected cursor-pointer text-xl font-medium bg-gradient-to-r from-zinc-800 to-zinc-950">
+        {categories.map((category, index) => (
+          <li key={index} className="pl-3 relative selected cursor-pointer text-xl font-medium bg-gradient-to-r from-zinc-800 to-zinc-950">
             {category}
           </li>
         ))}
