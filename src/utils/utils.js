@@ -9,7 +9,7 @@ const categories = [
   },
   {
     id: 3,
-    name: "Elect",
+    name: "Electronics",
   },
   {
     id: 4,
@@ -22,10 +22,6 @@ const categories = [
   {
     id: 6,
     name: "Miscellaneous",
-  },
-  {
-    id: 7,
-    name: "TShirt",
   },
 ];
 
