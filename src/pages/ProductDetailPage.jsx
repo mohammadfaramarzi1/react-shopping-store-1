@@ -17,9 +17,11 @@ function ProductDetailPage() {
   const [state, dispatch] = useProducts();
   const mainProduct = data.data.find((product) => product.id === +id);
   console.log(mainProduct);
-  console.log(state)
-  const productDetail = state.selectedItems.find(item => item.id === mainProduct.id) || 0;
-  console.log(productDetail)
+  console.log(state);
+  const productDetail = state.selectedItems.find(
+    (item) => item.id === mainProduct.id
+  ) || { quantity: 0 };
+  console.log(productDetail);
 
   const clickHandler = (type, data) => {
     dispatch({ type, payload: data });
@@ -73,7 +75,7 @@ function ProductDetailPage() {
               <span className="font-bold text-2xl">${mainProduct.price}</span>
             </div>
             <div className="flex items-center gap-x-2">
-              {productDetail.quantity === 0 && (
+              {productDetail?.quantity === 0 && (
                 <button
                   onClick={() => clickHandler("ADD_ITEM", mainProduct)}
                   className="flex items-center justify-center bg-violet-500 w-10 h-10 rounded-md hover:bg-violet-400 transition-colors delay-75"
