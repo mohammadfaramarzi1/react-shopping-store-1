@@ -7,7 +7,6 @@ import { FaMinus } from "react-icons/fa6";
 import { MdDelete } from "react-icons/md";
 import { BsBasket } from "react-icons/bs";
 import { useProducts } from "../context/ProductsContext";
-import { sumQuantity } from "../utils/utils";
 
 function ProductDetailPage() {
   const { id } = useParams();
@@ -19,7 +18,8 @@ function ProductDetailPage() {
   const mainProduct = data.data.find((product) => product.id === +id);
   console.log(mainProduct);
   console.log(state)
-  const quantity = sumQuantity(state.selectedItems);
+  const productDetail = state.selectedItems.find(item => item.id === mainProduct.id) || 0;
+  console.log(productDetail)
 
   const clickHandler = (type, data) => {
     dispatch({ type, payload: data });
@@ -73,7 +73,7 @@ function ProductDetailPage() {
               <span className="font-bold text-2xl">${mainProduct.price}</span>
             </div>
             <div className="flex items-center gap-x-2">
-              {quantity === 0 && (
+              {productDetail.quantity === 0 && (
                 <button
                   onClick={() => clickHandler("ADD_ITEM", mainProduct)}
                   className="flex items-center justify-center bg-violet-500 w-10 h-10 rounded-md hover:bg-violet-400 transition-colors delay-75"
@@ -81,7 +81,7 @@ function ProductDetailPage() {
                   <BsBasket className="text-2xl" />
                 </button>
               )}
-              {quantity >= 1 && (
+              {productDetail.quantity >= 1 && (
                 <button
                   onClick={() => clickHandler("INCREASE", mainProduct)}
                   className="flex items-center justify-center bg-violet-500 w-10 h-10 rounded-md hover:bg-violet-400 transition-colors delay-75"
@@ -89,10 +89,10 @@ function ProductDetailPage() {
                   <IoMdAdd className="text-2xl" />
                 </button>
               )}
-              {quantity !== 0 && (
-                <span className="text-xl">{quantity}</span>
+              {productDetail.quantity !== 0 && (
+                <span className="text-xl">{productDetail.quantity}</span>
               )}
-              {quantity === 1 && (
+              {productDetail.quantity === 1 && (
                 <button
                   onClick={() => clickHandler("REMOVE_ITEM", mainProduct)}
                   className="flex items-center justify-center bg-violet-500 w-10 h-10 rounded-md hover:bg-violet-400 transition-colors delay-75"
@@ -100,7 +100,7 @@ function ProductDetailPage() {
                   <MdDelete className="text-2xl" />
                 </button>
               )}
-              {quantity >= 2 && (
+              {productDetail.quantity >= 2 && (
                 <button
                   onClick={() => clickHandler("DECREASE", mainProduct)}
                   className="flex items-center justify-center bg-violet-500 w-10 h-10 rounded-md hover:bg-violet-400 transition-colors delay-75"
