@@ -1,17 +1,29 @@
 import { useQuery } from "@tanstack/react-query";
 import { Link, useParams } from "react-router-dom";
-import { IoIosArrowBack } from "react-icons/io";
+import { IoIosArrowBack, IoMdAdd } from "react-icons/io";
 
 import { getAllProducts } from "../services/products";
+import { FaMinus } from "react-icons/fa6";
+import { MdDelete } from "react-icons/md";
+import { BsBasket } from "react-icons/bs";
+import { useProducts } from "../context/ProductsContext";
+import { sumQuantity } from "../utils/utils";
 
-function ProductDetailPage( ) {
+function ProductDetailPage() {
   const { id } = useParams();
   const { data, error, isLoading } = useQuery({
     queryKey: ["all-products"],
     queryFn: () => getAllProducts,
   });
+  const [state, dispatch] = useProducts();
   const mainProduct = data.data.find((product) => product.id === +id);
   console.log(mainProduct);
+  console.log(state)
+  const quantity = sumQuantity(state.selectedItems);
+
+  const clickHandler = (type, data) => {
+    dispatch({ type, payload: data });
+  };
 
   return (
     <div className="p-12 bg-zinc-800 mt-10">
@@ -60,11 +72,43 @@ function ProductDetailPage( ) {
               <span className="text-2xl opacity-70 font-medium">Price</span>
               <span className="font-bold text-2xl">${mainProduct.price}</span>
             </div>
-            <button
-              className="bg-violet-500 w-32 h-10 rounded-md hover:bg-violet-400 transition-colors delay-75"
-            >
-              Add To Cart
-            </button>
+            <div className="flex items-center gap-x-2">
+              {quantity === 0 && (
+                <button
+                  onClick={() => clickHandler("ADD_ITEM", mainProduct)}
+                  className="flex items-center justify-center bg-violet-500 w-10 h-10 rounded-md hover:bg-violet-400 transition-colors delay-75"
+                >
+                  <BsBasket className="text-2xl" />
+                </button>
+              )}
+              {quantity >= 1 && (
+                <button
+                  onClick={() => clickHandler("INCREASE", mainProduct)}
+                  className="flex items-center justify-center bg-violet-500 w-10 h-10 rounded-md hover:bg-violet-400 transition-colors delay-75"
+                >
+                  <IoMdAdd className="text-2xl" />
+                </button>
+              )}
+              {quantity !== 0 && (
+                <span className="text-xl">{quantity}</span>
+              )}
+              {quantity === 1 && (
+                <button
+                  onClick={() => clickHandler("REMOVE_ITEM", mainProduct)}
+                  className="flex items-center justify-center bg-violet-500 w-10 h-10 rounded-md hover:bg-violet-400 transition-colors delay-75"
+                >
+                  <MdDelete className="text-2xl" />
+                </button>
+              )}
+              {quantity >= 2 && (
+                <button
+                  onClick={() => clickHandler("DECREASE", mainProduct)}
+                  className="flex items-center justify-center bg-violet-500 w-10 h-10 rounded-md hover:bg-violet-400 transition-colors delay-75"
+                >
+                  <FaMinus className="text-2xl" />
+                </button>
+              )}
+            </div>
           </div>
         </div>
       </div>
