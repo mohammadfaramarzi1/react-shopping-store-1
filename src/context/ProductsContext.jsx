@@ -1,4 +1,4 @@
-import { createContext, useReducer } from "react";
+import { createContext, useContext, useReducer } from "react";
 import { sumProducts } from "../utils/utils";
 
 const ProductsContext = createContext();
@@ -60,16 +60,20 @@ const reducer = (state, action) => {
   }
 };
 
-function ProductsProvider({children}) {
+function ProductsProvider({ children }) {
   const [state, dispatch] = useReducer(reducer, initialState);
 
   return (
-    <ProductsContext.Provider
-      value={{ dispatch, state }}
-    >
+    <ProductsContext.Provider value={{ dispatch, state }}>
       {children}
     </ProductsContext.Provider>
   );
 }
 
+const useProducts = () => {
+  const { state, dispatch } = useContext(ProductsContext);
+  return [state, dispatch];
+};
+
+export { useProducts };
 export default ProductsProvider;

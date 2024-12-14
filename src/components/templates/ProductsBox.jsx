@@ -1,6 +1,10 @@
 import { Link } from "react-router-dom";
+import { useProducts } from "../../context/ProductsContext";
 
 function ProductsBox({ products }) {
+  const result = useProducts();
+  console.log(result)
+
   return (
     <>
       {products.map((product) => (
