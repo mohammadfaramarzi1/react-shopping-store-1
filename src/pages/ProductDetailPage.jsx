@@ -31,12 +31,12 @@ function ProductDetailPage( ) {
               className="w-32 rounded-md mb-2"
             />
             <img
-              src={mainProduct.images[1]}
+              src={mainProduct.images[0]}
               alt={mainProduct.title}
               className="w-32 rounded-md mb-2"
             />
             <img
-              src={mainProduct.images[2]}
+              src={mainProduct.images[0]}
               alt={mainProduct.title}
               className="w-32 rounded-md mb-2"
             />
