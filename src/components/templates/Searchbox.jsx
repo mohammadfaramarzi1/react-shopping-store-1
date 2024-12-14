@@ -1,9 +1,18 @@
 import { CgSearch } from "react-icons/cg";
 
-function SearchBox({ search, setSearch }) {
+import { createQueryObject } from "../../utils/utils";
+
+function SearchBox({ search, setSearch, query, setQuery }) {
+  const clickHandler = () => {
+    setQuery((query) => createQueryObject(query, { search }));
+  };
+
   return (
     <div className="flex items-center gap-x-2 border-2 border-zinc-800 p-2 w-80 rounded-md">
-      <button className="bg-violet-500 w-7 h-7 flex items-center justify-center rounded-md text-xl">
+      <button
+        onClick={clickHandler}
+        className="bg-violet-500 w-7 h-7 flex items-center justify-center rounded-md text-xl"
+      >
         <CgSearch />
       </button>
       <input
@@ -11,7 +20,7 @@ function SearchBox({ search, setSearch }) {
         placeholder="Search..."
         className="bg-transparent w-full focus:outline-none py-1 text-md"
         value={search}
-        onChange={(e) => setSearch(e.target.value)}
+        onChange={(e) => setSearch(e.target.value.toLowerCase().trim())}
       />
     </div>
   );

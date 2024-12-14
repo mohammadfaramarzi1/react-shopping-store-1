@@ -25,4 +25,16 @@ const categories = [
   },
 ];
 
-export { categories };
+const createQueryObject = (query, newQuery) => {
+  if (newQuery.search === "") {
+    const { search, ...rest } = query;
+    return rest;
+  }
+  if (newQuery.category === "all") {
+    const { category, ...rest } = query;
+    return rest;
+  }
+  return { query, newQuery };
+};
+
+export { categories, createQueryObject };
