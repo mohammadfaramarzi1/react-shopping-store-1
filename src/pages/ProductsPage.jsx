@@ -51,7 +51,9 @@ function ProductsPage() {
       </div>
       <div className="flex justify-between mt-10">
         <div className="grid grid-cols-3 gap-6">
-          <ProductsBox products={mainProducts} />
+          {mainProducts.map((product) => (
+            <ProductsBox product={product} key={product.id} />
+          ))}
         </div>
         <div>
           <Category

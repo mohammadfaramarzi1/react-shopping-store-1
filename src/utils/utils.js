@@ -65,4 +65,23 @@ const sumProducts = (products) => {
   return { count, totalPrice };
 };
 
-export { categories, createQueryObject, filterProducts, searchProducts, sumProducts };
+const sumQuantity = (products) => {
+  const itemsCounter = products.reduce((acc, cur) => acc + cur.quantity, 0);
+  return itemsCounter;
+};
+
+const productQuantity = (state, id) => {
+  const index = state.selectedItems.findIndex((item) => item.id === id);
+  if (index === -1) return 0;
+  return state.selectedItems[index].quantity;
+};
+
+export {
+  categories,
+  createQueryObject,
+  filterProducts,
+  searchProducts,
+  sumProducts,
+  sumQuantity,
+  productQuantity,
+};

@@ -61,7 +61,6 @@ function ProductDetailPage( ) {
               <span className="font-bold text-2xl">${mainProduct.price}</span>
             </div>
             <button
-              onClick={clickHandler}
               className="bg-violet-500 w-32 h-10 rounded-md hover:bg-violet-400 transition-colors delay-75"
             >
               Add To Cart
