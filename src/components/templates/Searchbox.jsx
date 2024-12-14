@@ -1,6 +1,6 @@
 import { CgSearch } from "react-icons/cg";
 
-function SearchBox() {
+function SearchBox({ search, setSearch }) {
   return (
     <div className="flex items-center gap-x-2 border-2 border-zinc-800 p-2 w-80 rounded-md">
       <button className="bg-violet-500 w-7 h-7 flex items-center justify-center rounded-md text-xl">
@@ -10,6 +10,8 @@ function SearchBox() {
         type="text"
         placeholder="Search..."
         className="bg-transparent w-full focus:outline-none py-1 text-md"
+        value={search}
+        onChange={(e) => setSearch(e.target.value)}
       />
     </div>
   );
