@@ -2,7 +2,6 @@ import { SlBasket } from "react-icons/sl";
 
 import { sumQuantity } from "../utils/utils";
 
-
 import { useProducts } from "../context/ProductsContext";
 import SidebarCheckout from "../components/templates/SidebarCheckout";
 import ProductCheckout from "../components/templates/ProductCheckout";
@@ -28,10 +27,18 @@ function CheckOutPage() {
         </div>
       ) : (
         <div className="flex mt-5 gap-x-8">
-          <SidebarCheckout state={state} quantity={quantity} clickHandler={clickHandler} />
-          <div className="w-full h-screen">
+          <SidebarCheckout
+            state={state}
+            quantity={quantity}
+            clickHandler={clickHandler}
+          />
+          <div className={`w-full ${quantity === 1 ? "h-full" : ""}`}>
             {state.selectedItems.map((item) => (
-              <ProductCheckout item={item} key={item.id} clickHandler={clickHandler} />
+              <ProductCheckout
+                item={item}
+                key={item.id}
+                clickHandler={clickHandler}
+              />
             ))}
           </div>
         </div>

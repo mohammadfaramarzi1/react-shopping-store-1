@@ -13,7 +13,7 @@ function Category({ categories, query, setQuery }) {
   };
 
   return (
-    <div className="border-2 border-zinc-800 p-5 w-52 h-96">
+    <div className="border-2 border-zinc-800 p-5 w-52">
       <div className="flex items-center gap-x-2 mb-5">
         <BiCategoryAlt className="text-violet-500" />
         <h3 className="text-xl font-medium">Categories</h3>

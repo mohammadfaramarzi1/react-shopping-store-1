@@ -38,6 +38,7 @@ function ProductsPage() {
   }, [query]);
 
   const categoriesArray = categories;
+  console.log(mainProducts)
 
   return (
     <div className="p-12">
@@ -52,7 +53,7 @@ function ProductsPage() {
       <div className="flex justify-between mt-10">
         <div className="grid grid-cols-3 gap-6">
           {mainProducts.length === 0 ? (
-            <h2 className="w-[800px] flex items-center justify-center text-3xl text-violet-500 font-bold border-2 border-zinc-800 rounded-md">
+            <h2 className="w-[800px] flex items-center justify-center text-3xl text-violet-500 font-bold">
               There is no products related...
             </h2>
           ) : (
