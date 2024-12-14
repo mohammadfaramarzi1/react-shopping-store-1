@@ -5,6 +5,7 @@ import { BsBasket } from "react-icons/bs";
 import { Link } from "react-router-dom";
 
 function ProductCheckout({ item, clickHandler }) {
+  console.log(item)
   return (
     <div className="flex justify-between border-2 border-zinc-800 rounded-md p-4 mb-5">
       <Link to={`/products/${item.id}`} className="flex w-[600px] h-[200px]">
