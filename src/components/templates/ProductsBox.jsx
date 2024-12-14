@@ -23,7 +23,9 @@ function ProductsBox({ products }) {
             {product.description}
           </p>
           <span className="inline-block bg-zinc-800 p-2 rounded-full my-2">
-            {product.category.name}
+            {product.category.name === "Change title"
+              ? "Decoration"
+              : product.category.name}
           </span>
           <div className="flex justify-between items-center mt-2">
             <div className="flex flex-col">

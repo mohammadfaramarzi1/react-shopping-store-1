@@ -4,7 +4,7 @@ import SearchBox from "../components/templates/SearchBox";
 import ProductsBox from "../components/templates/ProductsBox";
 import { getAllProducts } from "../services/products";
 import Category from "../components/templates/Category";
-import { findCategories } from "../utils/utils";
+import { categories } from "../utils/utils";
 
 function ProductsPage() {
   const { data, error, isLoading } = useQuery({
@@ -12,7 +12,7 @@ function ProductsPage() {
     queryFn: () => getAllProducts,
   });
 
-  const categories = findCategories(data.data);
+  const categoriesArray = categories;
   console.log(categories);
 
   return (
