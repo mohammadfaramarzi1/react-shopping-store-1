@@ -25,4 +25,5 @@ function SearchBox({ search, setSearch, query, setQuery }) {
     </div>
   );
 }
-    
+
+export default SearchBox;
