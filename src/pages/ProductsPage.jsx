@@ -32,7 +32,7 @@ function ProductsPage() {
   useEffect(() => {
     setSearchParams(query);
     setSearch(query.search || "");
-    let finalProducts = searchProducts(products, query.search);
+    let finalProducts = searchProducts(products.slice(0, 49), query.search);
     finalProducts = filterProducts(finalProducts, query.category);
     setMainProducts(finalProducts);
   }, [query]);
