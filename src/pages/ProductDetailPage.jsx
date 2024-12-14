@@ -4,7 +4,7 @@ import { IoIosArrowBack } from "react-icons/io";
 
 import { getAllProducts } from "../services/products";
 
-function ProductDetailPage() {
+function ProductDetailPage( ) {
   const { id } = useParams();
   const { data, error, isLoading } = useQuery({
     queryKey: ["all-products"],
@@ -12,6 +12,7 @@ function ProductDetailPage() {
   });
   const mainProduct = data.data.find((product) => product.id === +id);
   console.log(mainProduct);
+
   return (
     <div className="p-12 bg-zinc-800 mt-10">
       <Link
@@ -59,7 +60,10 @@ function ProductDetailPage() {
               <span className="text-2xl opacity-70 font-medium">Price</span>
               <span className="font-bold text-2xl">${mainProduct.price}</span>
             </div>
-            <button className="bg-violet-500 w-32 h-10 rounded-md hover:bg-violet-400 transition-colors delay-75">
+            <button
+              onClick={clickHandler}
+              className="bg-violet-500 w-32 h-10 rounded-md hover:bg-violet-400 transition-colors delay-75"
+            >
               Add To Cart
             </button>
           </div>

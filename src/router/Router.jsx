@@ -15,7 +15,8 @@ function Router() {
     queryKey: ["all-products"],
     queryFn: () => getAllProducts,
   });
-  if(isLoading) return <Loader />
+
+  if (isLoading) return <Loader />;
 
   return (
     <Routes>

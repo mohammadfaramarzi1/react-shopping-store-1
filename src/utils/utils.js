@@ -56,4 +56,13 @@ const filterProducts = (products, category) => {
   return filteredProducts;
 };
 
-export { categories, createQueryObject, filterProducts, searchProducts };
+const sumProducts = (products) => {
+  const count = products.reduce((acc, cur) => acc + cur.quantity, 0);
+  const totalPrice = products.reduce(
+    (acc, cur) => acc + cur.quantity + cur.price,
+    0
+  );
+  return { count, totalPrice };
+};
+
+export { categories, createQueryObject, filterProducts, searchProducts, sumProducts };

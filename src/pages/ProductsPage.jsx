@@ -25,20 +25,14 @@ function ProductsPage() {
 
   const [searchParams, setSearchParams] = useSearchParams();
 
-  console.log(query);
-
-  console.log(mainProducts);
-
   useEffect(() => {
     setMainProducts(products);
   }, []);
 
-  console.log("P", mainProducts);
-
   useEffect(() => {
     setSearchParams(query);
     setSearch(query.search || "");
-    let finalProducts = searchProducts(products.slice(0, 41), query.search);
+    let finalProducts = searchProducts(products.slice(0, 35), query.search);
     finalProducts = filterProducts(finalProducts, query.category);
     setMainProducts(finalProducts);
   }, [query]);
