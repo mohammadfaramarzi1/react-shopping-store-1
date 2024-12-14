@@ -32,7 +32,7 @@ function CheckOutPage() {
             quantity={quantity}
             clickHandler={clickHandler}
           />
-          <div className={`w-full ${quantity === 1 ? "h-full" : ""}`}>
+          <div className={`w-full ${quantity === 1 ? "h-screen" : ""}`}>
             {state.selectedItems.map((item) => (
               <ProductCheckout
                 item={item}
