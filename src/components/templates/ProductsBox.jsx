@@ -2,12 +2,12 @@ import { Link } from "react-router-dom";
 
 function ProductsBox({ products }) {
   const mainProducts = products.data.filter(
-    (product) => !product.title.toLowerCase().includes("new")
+    (product) => !product.title.toLowerCase().includes("new" || "test")
   );
 
   return (
     <>
-      {mainProducts.map((product) => (
+      {mainProducts.slice(0, 41).map((product) => (
         <Link
           to={`/products/${product.id}`}
           key={product.id}
