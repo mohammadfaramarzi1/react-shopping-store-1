@@ -11,10 +11,8 @@ function ProductsBox({ product }) {
   const [state, dispatch] = useProducts();
 
   const clickHandler = (type, data) => {
-    console.log({ type, data });
     dispatch({ type, payload: data });
   };
-  console.log({ state, dispatch });
 
   const quantity = productQuantity(state, product.id);
 

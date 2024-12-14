@@ -56,7 +56,7 @@ function AboutUsPage() {
         </Link>
       </div>
       <h1 className="text-violet-500 text-3xl my-5">Api Reference</h1>
-      <Link to="https://fakeapi.platzi.com/">https://fakeapi.platzi.com/</Link>
+      <Link to="https://fakeapi.platzi.com/" className="text-2xl">https://fakeapi.platzi.com/</Link>
       <h3 className="text-violet-500 text-3xl my-4">Let's Connect</h3>
       <p className="text-2xl mb-4">
         Explore the website, discover the offerings, and if you have any

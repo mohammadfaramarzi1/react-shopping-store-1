@@ -9,7 +9,7 @@ const categories = [
   },
   {
     id: 3,
-    name: "Electronics",
+    name: "Electronic",
   },
   {
     id: 4,
