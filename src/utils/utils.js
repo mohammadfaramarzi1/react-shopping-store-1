@@ -59,7 +59,7 @@ const filterProducts = (products, category) => {
 const sumProducts = (products) => {
   const count = products.reduce((acc, cur) => acc + cur.quantity, 0);
   const totalPrice = products.reduce(
-    (acc, cur) => acc + cur.quantity + cur.price,
+    (acc, cur) => acc + cur.quantity * cur.price,
     0
   );
   return { count, totalPrice };

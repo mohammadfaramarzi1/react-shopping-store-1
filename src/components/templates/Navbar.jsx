@@ -7,7 +7,6 @@ function Navbar() {
   const [state] = useProducts();
 
   const quantity = sumQuantity(state.selectedItems);
-  console.log("q", quantity);
 
   return (
     <div className="container py-4 flex items-center justify-between">
