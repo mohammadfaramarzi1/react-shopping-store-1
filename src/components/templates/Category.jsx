@@ -1,10 +1,14 @@
 import { BiCategoryAlt } from "react-icons/bi";
 
 import { createQueryObject } from "../../utils/utils";
+import { useState } from "react";
 
-function Category({ categories, setQuery }) {
+function Category({ categories, query, setQuery }) {
+  const [selected, setSelected] = useState("All");
+
   const clickHandler = (categoryName) => {
     const category = categoryName.toLowerCase();
+    setSelected(categoryName);
     setQuery((query) => createQueryObject(query, { category }));
   };
 
@@ -18,7 +22,9 @@ function Category({ categories, setQuery }) {
         {categories.map((category) => (
           <li
             key={category.id}
-            className="pl-3 relative selected cursor-pointer text-xl font-medium bg-gradient-to-r from-zinc-800 to-zinc-950"
+            className={`"pl-3 relative cursor-pointer text-xl font-medium bg-gradient-to-r from-zinc-800 to-zinc-950" ${
+              selected === category.name ? "selected" : ""
+            }`}
             onClick={() => clickHandler(category.name)}
           >
             {category.name === "Change title" ? "Decoration" : category.name}

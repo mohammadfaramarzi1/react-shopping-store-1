@@ -34,7 +34,26 @@ const createQueryObject = (query, newQuery) => {
     const { category, ...rest } = query;
     return rest;
   }
-  return { query, newQuery };
+  return { ...query, ...newQuery };
 };
 
-export { categories, createQueryObject };
+const searchProducts = (products, search) => {
+  if (!search) return products;
+  const searchedProducts = products.filter((product) =>
+    product.title.toLowerCase().includes(search)
+  );
+  return searchedProducts;
+};
+
+const filterProducts = (products, category) => {
+  if (!category || category == "all") return products;
+  if (category === "decoration") {
+    category = "change title";
+  }
+  const filteredProducts = products.filter(
+    (product) => product.category.name.toLowerCase() === category
+  );
+  return filteredProducts;
+};
+
+export { categories, createQueryObject, filterProducts, searchProducts };

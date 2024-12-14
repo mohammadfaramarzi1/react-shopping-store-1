@@ -15,7 +15,6 @@ function Router() {
     queryKey: ["all-products"],
     queryFn: () => getAllProducts,
   });
-  console.log({ data, error, isLoading });
   if(isLoading) return <Loader />
 
   return (

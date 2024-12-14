@@ -55,14 +55,21 @@ function AboutUsPage() {
           <h5>Tailwind</h5>
         </Link>
       </div>
-      <h3 className="text-violet-500 text-3xl mb-4">Let's Connect</h3>
+      <h1 className="text-violet-500 text-3xl my-5">Api Reference</h1>
+      <Link to="https://fakeapi.platzi.com/">https://fakeapi.platzi.com/</Link>
+      <h3 className="text-violet-500 text-3xl my-4">Let's Connect</h3>
       <p className="text-2xl mb-4">
         Explore the website, discover the offerings, and if you have any
         questions or suggestions, I'm here to listen. Your journey through this
         online shopping experience is as important to me as it is to you. Happy
         exploring!
       </p>
-      <div className="flex justify-between my-10 max-w-80 mx-auto child:text-6xl">
+      <div
+        className="flex justify-between my-10 max-w-80 mx-auto child:text-6xl"
+        data-aos="fade-down"
+        data-aos-offset="200"
+        data-aos-easing="ease-in-sine"
+      >
         <Link
           to="https://www.faramarzi.dev@gmail.com"
           className=" hover:text-red-600 transition-colors delay-75"
