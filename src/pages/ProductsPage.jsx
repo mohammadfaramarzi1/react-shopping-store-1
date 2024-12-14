@@ -32,7 +32,7 @@ function ProductsPage() {
   useEffect(() => {
     setSearchParams(query);
     setSearch(query.search || "");
-    let finalProducts = searchProducts(products.slice(0, 35), query.search);
+    let finalProducts = searchProducts(products.slice(0, 38), query.search);
     finalProducts = filterProducts(finalProducts, query.category);
     setMainProducts(finalProducts);
   }, [query]);
@@ -51,6 +51,13 @@ function ProductsPage() {
       </div>
       <div className="flex justify-between mt-10">
         <div className="grid grid-cols-3 gap-6">
+          {mainProducts.length === 0 ? (
+            <h2 className="w-[800px] flex items-center justify-center text-3xl text-violet-500 font-bold border-2 border-zinc-800 rounded-md">
+              There is no products related...
+            </h2>
+          ) : (
+            ""
+          )}
           {mainProducts.map((product) => (
             <ProductsBox product={product} key={product.id} />
           ))}
