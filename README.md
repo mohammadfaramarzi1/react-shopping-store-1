@@ -1,8 +1,27 @@
-# React + Vite
+# React Shopping Store
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This a shopping strore. I used from React Query, Tailwind and Axios. 
 
-Currently, two official plugins are available:
+My api reference is <a href="https://fakeapi.platzi.com/en/rest/products/"> https://fakeapi.platzi.com/en/rest/products/. </a>
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+ScreenShots:
+
+<img src="https://github.com/mohammadfaramarzi1/react-shopping-store-1/blob/main/Screenshot%202024-12-14%20223126.png?raw=true" />
+
+<img src="https://github.com/mohammadfaramarzi1/react-shopping-store-1/blob/main/Screenshot%202024-12-14%20223145.png?raw=true" />
+
+<img src="https://github.com/mohammadfaramarzi1/react-shopping-store-1/blob/main/Screenshot%202024-12-14%20223159.png?raw=true" />
+
+<img src="https://github.com/mohammadfaramarzi1/react-shopping-store-1/blob/main/Screenshot%202024-12-14%20223216.png?raw=true" />
+
+<img src="https://github.com/mohammadfaramarzi1/react-shopping-store-1/blob/main/Screenshot%202024-12-14%20223243.png?raw=true" />
+
+<img src="https://github.com/mohammadfaramarzi1/react-shopping-store-1/blob/main/Screenshot%202024-12-14%20223257.png?raw=true" />
+
+---
+
+Demo:
+
+<a href="https://react-shopping-store-1.vercel.app/">Click here to see demo</a>
+
