@@ -23,5 +23,5 @@ ScreenShots:
 
 Demo:
 
-<a href="https://react-shopping-store-1.vercel.app/">Click here to see demo</a>
+<a target="_blank" href="https://react-shopping-store-1.vercel.app/">Click here to see demo</a>
 
