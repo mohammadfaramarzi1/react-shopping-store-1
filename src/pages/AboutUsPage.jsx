@@ -17,16 +17,16 @@ function AboutUsPage() {
 
   return (
     <div className="p-12">
-      <h3 className="text-violet-500 text-3xl mb-4">About Developer</h3>
-      <p className="text-2xl mb-6">
+      <h3 className="text-violet-500 text-xl md:text-3xl mb-4">About Developer</h3>
+      <p className="text-md md:text-2xl mb-6">
         Hello, I'm <span className="text-violet-500">Mohammad Faramarzi</span>,
         20 years old, student at Eslamshahr University. It's about 1.5 years
         that learning and coding Font-End.
       </p>
-      <h3 className="text-violet-500 text-3xl mb-4">
+      <h3 className="text-violet-500 text-xl md:text-3xl mb-4">
         Frameworks and Technologies Used
       </h3>
-      <p className="text-2xl mb-4">
+      <p className="text-md md:text-2xl mb-4">
         In the development of this website, I've harnessed the power of the
         following frameworks and technologies to create a modern, single-page
         application (SPA):
@@ -35,8 +35,8 @@ function AboutUsPage() {
         data-aos="fade-down"
         data-aos-offset="200"
         data-aos-easing="ease-in-sine"
-        className="flex justify-between my-10 w-[750px] mx-auto child:flex child:flex-col
-        child:items-center child:text-4xl child:cursor-pointer"
+        className="flex justify-center gap-5 flex-wrap my-10  mx-auto child:flex child:flex-col
+        child:items-center child:text-2xl child:sm:text-4xl child:cursor-pointer"
       >
         <Link to="https://react.dev/">
           <RiReactjsFill className="hover:text-indigo-700 transition-colors delay-75" />
@@ -55,17 +55,17 @@ function AboutUsPage() {
           <h5>Tailwind</h5>
         </Link>
       </div>
-      <h1 className="text-violet-500 text-3xl my-5">Api Reference</h1>
+      <h1 className="text-violet-500 text-lg md:text-3xl my-5">Api Reference</h1>
       <Link to="https://fakeapi.platzi.com/" className="text-2xl">https://fakeapi.platzi.com/</Link>
-      <h3 className="text-violet-500 text-3xl my-4">Let's Connect</h3>
-      <p className="text-2xl mb-4">
+      <h3 className="text-violet-500 text-lg md:text-3xl my-4">Let's Connect</h3>
+      <p className="text-md md:text-2xl mb-4">
         Explore the website, discover the offerings, and if you have any
         questions or suggestions, I'm here to listen. Your journey through this
         online shopping experience is as important to me as it is to you. Happy
         exploring!
       </p>
       <div
-        className="flex justify-between my-10 max-w-80 mx-auto child:text-6xl"
+        className="flex justify-between my-10 max-w-80 mx-auto child:text-2xl child:md:text-6xl"
         data-aos="fade-down"
         data-aos-offset="200"
         data-aos-easing="ease-in-sine"
