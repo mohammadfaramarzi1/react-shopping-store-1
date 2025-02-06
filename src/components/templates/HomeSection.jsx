@@ -4,10 +4,10 @@ import { Link } from "react-router-dom";
 function HomeSection() {
   return (
     <div className="text-center py-24 flex flex-col gap-5">
-      <h1 className="text-6xl font-medium">
+      <h1 className="text-3xl lg:text-6xl font-medium">
         Make your Outfit <span className="text-violet-500">wonderful</span>
       </h1>
-      <p className="max-w-lg mx-auto text-2xl opacity-70">
+      <p className="max-w-lg mx-auto text-md lg:text-2xl opacity-70">
         Lorem ipsum, dolor sit amet consectetur adipisicing elit. Facere soluta
         iusto expedita veniam asperiores, cumque id, tempora numquam
         voluptatibus.
