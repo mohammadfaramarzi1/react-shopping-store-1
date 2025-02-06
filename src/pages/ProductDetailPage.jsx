@@ -36,8 +36,8 @@ function ProductDetailPage() {
         <IoIosArrowBack />
         Back
       </Link>
-      <div className="mt-10 flex justify-between">
-        <div className="flex gap-x-5">
+      <div className="mt-10 flex flex-col xl:flex-row justify-center xl:justify-between">
+        <div className="flex justify-center gap-x-5">
           <div>
             <img
               src={mainProduct.images[0]}
@@ -63,7 +63,7 @@ function ProductDetailPage() {
             />
           </div>
         </div>
-        <div className="max-w-2xl">
+        <div className="w-full xl:max-w-xl mt-10 xl:mt-0">
           <h2 className="text-3xl font-bold">{mainProduct.title}</h2>
           <span className="inline-block bg-zinc-900 p-2 rounded-full my-4">
             {mainProduct.category.name}
