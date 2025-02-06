@@ -50,8 +50,8 @@ function ProductsPage() {
           setQuery={setQuery}
         />
       </div>
-      <div className="flex justify-between mt-10">
-        <div className="grid grid-cols-3 gap-6">
+      <div className="flex flex-col-reverse sm:flex-row justify-between mt-10">
+        <div className="flex items-center justify-center flex-wrap gap-6">
           {mainProducts.length === 0 ? (
             <h2 className="w-[800px] flex items-center justify-center text-3xl text-violet-500 font-bold">
               There is no products related...

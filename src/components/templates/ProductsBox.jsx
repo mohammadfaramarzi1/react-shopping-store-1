@@ -17,7 +17,7 @@ function ProductsBox({ product }) {
   const quantity = productQuantity(state, product.id);
 
   return (
-    <div className="w-96 border-2 border-zinc-800 p-6 rounded-md">
+    <div className="w-72 border-2 border-zinc-800 p-6 rounded-md">
       <Link to={`/products/${product.id}`}>
         <img
           src={product.images[0]}

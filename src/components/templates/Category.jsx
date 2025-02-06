@@ -13,12 +13,12 @@ function Category({ categories, query, setQuery }) {
   };
 
   return (
-    <div className="border-2 border-zinc-800 p-5 w-52">
+    <div className="flex flex-col sm:block border-2 border-zinc-800 p-5 sm:w-52 my-5 sm:my-0">
       <div className="flex items-center gap-x-2 mb-5">
         <BiCategoryAlt className="text-violet-500" />
         <h3 className="text-xl font-medium">Categories</h3>
       </div>
-      <ul className="flex flex-col gap-y-6">
+      <ul className="flex flex-row flex-wrap justify-center sm:flex-col gap-4">
         {categories.map((category) => (
           <li
             key={category.id}

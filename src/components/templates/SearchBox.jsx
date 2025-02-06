@@ -8,7 +8,7 @@ function SearchBox({ search, setSearch, query, setQuery }) {
   };
 
   return (
-    <div className="flex items-center gap-x-2 border-2 border-zinc-800 p-2 w-80 rounded-md">
+    <div className="flex items-center gap-x-2 border-2 border-zinc-800 p-2 w-full sm:w-80 rounded-md">
       <button
         onClick={clickHandler}
         className="bg-violet-500 w-7 h-7 flex items-center justify-center rounded-md text-xl"
