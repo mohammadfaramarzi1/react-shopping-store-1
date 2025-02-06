@@ -20,14 +20,14 @@ function SimpleWorksBoxSection() {
 
   return (
     <div className="p-12 bg-zinc-800">
-      <div className="-mt-24 grid grid-cols-3 gap-10">
+      <div className="-mt-24 flex justify-center gap-10 flex-wrap">
         {simpleWorksBoxsInfosArray.map((simpleWorksBoxesInfo) => (
           <div
             key={simpleWorksBoxesInfo.id}
             data-aos="flip-right"
             data-aos-offset="200"
             data-aos-easing="ease-in-sine"
-            className="flex flex-col items-center justify-center gap-y-2 bg-zinc-700 rounded-md h-[150px]"
+            className="flex flex-col items-center justify-center gap-y-2 bg-zinc-700 rounded-md h-[150px] p-3"
           >
             <div className="bg-violet-500 w-12 h-12 rounded-full flex items-center justify-center text-3xl">
               {simpleWorksBoxesInfo.icon === "BiTransferAlt" && (
@@ -45,10 +45,10 @@ function SimpleWorksBoxSection() {
                 <TbStarsFilled />
               )}
             </div>
-            <h2 className="text-2xl font-medium ">
+            <h2 className="text-md lg:text-2xl font-medium ">
               {simpleWorksBoxesInfo.title}
             </h2>
-            <p className="opacity-70">{simpleWorksBoxesInfo.desc}</p>
+            <p className="opacity-70 text-xs md:text-sm text-center">{simpleWorksBoxesInfo.desc}</p>
           </div>
         ))}
       </div>
