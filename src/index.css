@@ -48,4 +48,10 @@
   .selected {
     @apply text-violet-500;
   }
+  .mobile-menu {
+    @apply hidden transition delay-75
+  }
+  .mobile-menu--show {
+    @apply block md:hidden fixed w-full h-screen inset-0 p-5 bg-zinc-800 z-20 overflow-hidden;
+  }
 }
