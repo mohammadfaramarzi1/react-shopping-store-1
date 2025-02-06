@@ -24,13 +24,13 @@
 
 @layer components {
   .section-parent {
-    @apply flex flex-col items-center py-16 relative;
+    @apply flex flex-col items-center py-16 relative ;
   }
   .section-title {
     @apply text-xl mb-3;
   }
   .section-description {
-    @apply opacity-70 max-w-md text-center text-lg;
+    @apply opacity-70 max-w-md text-justify text-lg;
   }
   .section-parent::after {
     position: absolute;

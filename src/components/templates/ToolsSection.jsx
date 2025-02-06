@@ -12,9 +12,9 @@ function ToolsSection() {
     AOS.init();
   }, []);
   return (
-    <div className="flex gap-10">
+    <div className="flex flex-col-reverse items-center lg:flex-row gap-10">
       <div
-        className="-mb-10 min-w-[600px]"
+        className="-mb-10 max-w-[600px]"
         data-aos="fade-right"
         data-aos-offset="200"
         data-aos-easing="ease-in-sine"
@@ -33,7 +33,7 @@ function ToolsSection() {
           ))}
         </div>
       </div>
-      <div className="w-[600px] flex items-center justify-center">
+      <div className="max-w-[600px] flex items-center justify-center">
         <img
           src="/illustration1-mvQYH-I0.svg"
           alt="cover"
