@@ -26,7 +26,7 @@ function CheckOutPage() {
           <SlBasket className="text-4xl" />
         </div>
       ) : (
-        <div className="flex mt-5 gap-x-8">
+        <div className="flex flex-col-reverse xl:flex-row mt-5 gap-x-8">
           <SidebarCheckout
             state={state}
             quantity={quantity}
