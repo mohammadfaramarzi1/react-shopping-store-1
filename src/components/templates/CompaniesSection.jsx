@@ -22,7 +22,7 @@ function CompaniesSection() {
         title="Trusted by over 20,000 companies all over the world"
         desc="Arcu cursus vitae congue mauris rhoncus viverra nibh cras pulvinar mattis blandit libero cursus mattis."
       />
-      <div className="flex justify-between max-w-[900px] mx-auto child:flex child:flex-col child:items-center child:gap-y-1.5 child:text-3xl">
+      <div className="flex justify-center gap-5 flex-wrap max-w-[900px] mx-auto child:flex child:flex-col child:items-center child:gap-y-1.5 child:text-3xl">
         <Link to="https://www.facebook.com/">
           <FaFacebookF />
           <h4>Facebook</h4>
