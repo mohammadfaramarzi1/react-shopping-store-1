@@ -14,7 +14,6 @@ function CheckOutPage() {
     dispatch({ type, payload: data });
   };
 
-  console.log(state);
 
   return (
     <div className="px-12">

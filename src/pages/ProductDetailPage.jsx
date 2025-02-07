@@ -16,12 +16,9 @@ function ProductDetailPage() {
   });
   const [state, dispatch] = useProducts();
   const mainProduct = data.data.find((product) => product.id === +id);
-  console.log(mainProduct);
-  console.log(state);
   const productDetail = state.selectedItems.find(
     (item) => item.id === mainProduct.id
   ) || { quantity: 0 };
-  console.log(productDetail);
 
   const clickHandler = (type, data) => {
     dispatch({ type, payload: data });

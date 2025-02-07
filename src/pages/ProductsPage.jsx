@@ -38,7 +38,6 @@ function ProductsPage() {
   }, [query]);
 
   const categoriesArray = categories;
-  console.log(mainProducts)
 
   return (
     <div className="p-12">
